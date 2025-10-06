@@ -7,3 +7,5 @@ const connesctDB = async () => {
         console.log(error)
     }
 }
+
+module.eports = connesctDB;
