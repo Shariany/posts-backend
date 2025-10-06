@@ -12,7 +12,7 @@ const createPost = async (req, res) => {
     res.status(404).json({message: error.message})
    }
 }
-
+//get all posts
 const getAllposts = async (req, res) => {
     try {
         const posts = await Post.find();

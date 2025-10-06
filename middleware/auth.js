@@ -1,5 +1,7 @@
 const jwt = require("jsonwebtoken")
-Bearer
+
+const User = require('../models/users');
+
 const auth = async (req, res, next) => {
     try {
         const token = req.headers.authorisation.split("")[1];
@@ -11,10 +13,10 @@ const auth = async (req, res, next) => {
 
             req.userId = decodedData.id;
         } 
-        next()
+        next();
         
     } catch (error) {
-        res.status(401).json({message:})
+        res.status(401).json({message: "Invalid token"});
     }
 }
-module.exports = router;
+module.exports = auth;
